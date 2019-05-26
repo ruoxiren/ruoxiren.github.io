@@ -10,13 +10,15 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      <!-- {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
-      {%- endif -%}</p> -->
-    {% assign author = site.authors | where: 'short_name', page.author | first %}
-      {% if page.author %}
-        • <a href="{{ author.url }}">{{ page.author }}</a>
+      <!-- {%- if page.category -%}
+        • <span itemprop="category" itemscope itemtype="http://schema.org/Person"><span class="p-category h-card" itemprop="name">{{ page.category | escape }}</span></span>
+      {%- endif -%}-->
+    
+    {% assign category = site.categories | where: 'short_name', page.category| first %}
+      {% if page.category %}
+        • <a href="{{ category.url }}">{{ page.category }}</a>
       {% endif %}
+  </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

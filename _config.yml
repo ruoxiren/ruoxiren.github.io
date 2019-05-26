@@ -1,8 +1,8 @@
-title: Shang & Tun
-author: Shang and Tun
-email: Shang.Wang@tufts.edu
+title: RuoxiRen's Blog
+author: RuoxiRen
+email: Ruoxi.Ren@tufts.edu
 description: > # this means to ignore newlines until "show_exerpts:"
-  This is an discription
+  Do not go gentle into that good night.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -41,16 +41,18 @@ minima:
 #header_pages:
 # - about.md
 
+markdown: kramdown
+
 collections:
-  authors:
+  categories:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "categories"
     values:
-      layout: "author"
+      layout: "category"
   - scope:
       path: ""
       type: "posts"
@@ -65,8 +67,7 @@ defaults:
 
 header_pages:
   - about.md
-  - test.md
-  - staff.html
+  - category.html
 
 
 # Build settings
